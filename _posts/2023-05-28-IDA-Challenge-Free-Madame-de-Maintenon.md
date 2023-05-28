@@ -95,16 +95,17 @@ These are (roughly) the necessary conditions to meet in order to reach the "succ
 
 
 ```c
+
 // Condition 1
-if((flag[8] + flag[-1] - flag[4] - flag[7]) != 0x1cd4){
+if((flag[16:18] + flag[22:24] - flag[8:10] - flag[14:16]) != 0x1cd4){
 	JMP_TO_FAIL;
 }
 // Condition 2
-if ((flag[3] + flag[1] + flag[-2] - flag[5]) != 0xd899){
+if ((flag[20:22] + flag[6:8] + flag[2:4] - flag[10:12]) != 0xd899){
 	JMP_TO_FAIL;
 }
 // Condition 3
-if ((flag[17:] ^ flag[0:7]) != 0xA04233A475D1B72){
+if ((flag[16:] ^ flag[0:8]) != 0xA04233A475D1B72){
 	JMP_TO_FAIL;
 
 }
@@ -114,7 +115,7 @@ while (counter != 0x1d9AD){
 	++counter;
 }
 
-if (flag[0:4] + (flag[-1:-5] * 2) - (4 * flag[8:12]) - (flag[17:21] >> 3) - (flag[4:8] >> 3) != 0x4B5469C){
+if (flag[20:24] + (flag[0:4] * 2) - (4 * flag[8:12]) - (flag[16:20] >> 3) - (flag[4:8] >> 3) != 0x4B5469C){
 	JMP_TO_FAIL;	
 }
 
