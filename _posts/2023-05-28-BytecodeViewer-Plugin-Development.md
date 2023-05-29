@@ -35,7 +35,7 @@ java -cp "/path/to/jython.jar:/path/to/Bytecode-Viewer.jar" the.bytecode.club.by
 For testing, use the skeleton [example](https://github.com/Konloch/bytecode-viewer/blob/ca894b3d1666a39280918198934ed165274846ae/plugins/python/skeleton.py) provided by the tool:
 
 
-![BytecodeViewer-Python](/assets/img/bytecodeViewer-python.png) 
+![BytecodeViewer-Python](/assets/img/bytecodeviewer-python.png) 
 
 ## Ruby
 
@@ -48,7 +48,7 @@ java -cp "/path/to/jruby.jar:/path/to/Bytecode-Viewer.jar" the.bytecode.club.byt
 
 For testing, use the skeleton [example](https://github.com/Konloch/bytecode-viewer/blob/ca894b3d1666a39280918198934ed165274846ae/plugins/ruby/Skeleton.rb) provided by the tool:
 
-![BytecodeViewer-Ruby](/assets/img/bytecodeViewer-ruby.png) 
+![BytecodeViewer-Ruby](/assets/img/bytecodeviewer-ruby.png) 
 
 ## Javascript
 
@@ -65,7 +65,7 @@ java -cp "/path/to/groovy/lib/*:/path/to/Bytecode-Viewer.jar" the.bytecode.club.
 For testing, use the skeleton [example](https://github.com/Konloch/bytecode-viewer/blob/ca894b3d1666a39280918198934ed165274846ae/plugins/groovy/Skeleton.gy) provided by the tool:
 
 
-![BytecodeViewer-Groovy](/assets/img/bytecodeViewer-groovy.png) 
+![BytecodeViewer-Groovy](/assets/img/bytecodeviewer-groovy.png) 
 
 ## Full Installer
 
