@@ -1,6 +1,6 @@
 ---
-title: Make Ghidra for IDA Users
-date: 2024-06-17
+title: Make Ghidra Great Again for IDA Users
+date: 2024-03-21
 categories: [Reversing, Tool Development]
 tags: [Ghidra]    
 ---
