@@ -149,7 +149,7 @@ cp dist/*.zip $GHIDRA_HOME/Extensions/Ghidra
 
 
 # Ghidra-RSP
-cd $HOME/ Ghidra-RSP
+cd $HOME/Ghidra-RSP
 gradle -PGHIDRA_INSTALL_DIR=$GHIDRA_HOME
 cp dist/*.zip $GHIDRA_HOME/Extensions/Ghidra 
 
