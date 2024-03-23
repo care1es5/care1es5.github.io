@@ -112,6 +112,72 @@ I think there is a field that you can uncheck under `Edit` -> `Tool Options` -> 
 
 ![highlight](/assets/img/ghidra-ida-users-2.png)
 
+
+# Manuals
+
+For IDA, [idaref](https://github.com/nologic/idaref) was my go to plugin for referencing instruction manual. Ghidra supports something similar by default. You just have to make sure the reference manual exists under `Ghidra/Processors/<arch>/data/manuals/`. Once you download it to the right location, you can navigate to `Tools` -> `Processor Manual`. One thing to note is that it expects pdf file with a pre-defined name. Just renaming the lastest volume/version of reference manual will solve this error:
+
+
+![highlight](/assets/img/ghidra-ida-users-3.png)
+
+
+# Plugins
+
+This is one of the things that I do not like about Ghidra. You have to re-build the plugins everytime new version of Ghidra comes out. Unless there is a whole re-write of API/internal features, I hope this should not be the case for most of the time. To smooth things out, I wrote a quick script to automate the process:
+
+
+```bash
+
+GHIDRA_HOME=<Ghidra Home>
+HOME=/home/<username>/Desktop
+
+# dragondance
+cd $HOME/dragondace 
+gradle -PGHIDRA_INSTALL_DIR=$GHIDRA_HOME
+cp dist/*.zip $GHIDRA_HOME/Extensions/Ghidra 
+
+# ghidra_sega_ldr
+cd $HOME/ghidra_sega_ldr
+gradle -PGHIDRA_INSTALL_DIR=$GHIDRA_HOME
+cp dist/*.zip $GHIDRA_HOME/Extensions/Ghidra 
+
+
+# GhidraNes
+cd $HOME/GhidraNes
+gradle -PGHIDRA_INSTALL_DIR=$GHIDRA_HOME
+cp dist/*.zip $GHIDRA_HOME/Extensions/Ghidra 
+
+
+# Ghidra-RSP
+cd $HOME/ Ghidra-RSP
+gradle -PGHIDRA_INSTALL_DIR=$GHIDRA_HOME
+cp dist/*.zip $GHIDRA_HOME/Extensions/Ghidra 
+
+# Add More Plugins below this line
+# -----------------------------
+
+```
+
+
+# Comments
+
+If you notice that your comments are not showing up in the decompiled output, check to make sure the options are turned on for any types of comments you are making. You can navigate to `Edit` -> `Tool Options` -> `Decompiler` -> `Display`:
+
+
+![highlight](/assets/img/ghidra-ida-users-4.png)
+
+
+Also, while you are there, if you like to see as much information as possible in the decompiled output, you should definitely turn on `Print nULL for null pointers` option.
+
+
+# Function Graph and Listing Fields
+
+
+Similar to comments, if any of the fields in the graph node/listing fields are not showing up, press the little white icon at the top corner of either views and expand their size:
+
+![highlight](/assets/img/ghidra-ida-users-5.png)
+
+
 # Conclusion
 
 I am going to add more things here if I find anything that makes my journey of using Ghidra difficult.
