@@ -178,6 +178,13 @@ Similar to comments, if any of the fields in the graph node/listing fields are n
 ![highlight](/assets/img/ghidra-ida-users-5.png)
 
 
+# External Libraries
+
+Unless you provide all the necessary external libraries, Ghidra may not recognize some of the functions (including commonly used one). To fix this, you can press `Options` when you first import the binary and check `Load Local Libraries from Disk` or `Load System Libraries from Disk`. Just make sure to provide the correct path for both of them:
+
+
+![highlight](/assets/img/ghidra-ida-users-6.png)
+
 # Conclusion
 
 I am going to add more things here if I find anything that makes my journey of using Ghidra difficult.
