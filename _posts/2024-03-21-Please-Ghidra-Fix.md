@@ -167,7 +167,7 @@ If you notice that your comments are not showing up in the decompiled output, ch
 ![highlight](/assets/img/ghidra-ida-users-4.png)
 
 
-Also, while you are there, if you like to see as much information as possible in the decompiled output, you should definitely turn on `Print nULL for null pointers` option.
+Also, while you are there, if you like to see as much information as possible in the decompiled output, you should definitely turn on `Print NULL for null pointers` option.
 
 
 # Function Graph and Listing Fields
@@ -184,6 +184,15 @@ Unless you provide all the necessary external libraries, Ghidra may not recogniz
 
 
 ![highlight](/assets/img/ghidra-ida-users-6.png)
+
+
+# Selection
+
+For most of the time, I used code coverage tools and load its data into Ghidra in order to visualize the executin flow of the target program. However, depending on the target program, you may not have an easy way to get its data. To get around this, if the program you are looking at is small enough, I used selection tools to select all nodes of the function I am currently looking at and de-select the node that has not been hit:
+
+![highlight](/assets/img/ghidra-ida-users-7.png)
+
+This can be done by `Select` -> `Flow From`. It's important to remember this is just a hack. Ideally, if you are going the manual analysis route, you should consider permanently setting the colors of each node by right clicking the node and selecting `Colors` -> `Set Colors`.
 
 # Conclusion
 
