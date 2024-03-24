@@ -188,11 +188,11 @@ Unless you provide all the necessary external libraries, Ghidra may not recogniz
 
 # Selection
 
-For most of the time, I used code coverage tools and load its data into Ghidra in order to visualize the executin flow of the target program. However, depending on the target program, you may not have an easy way to get its data. To get around this, if the program you are looking at is small enough, I used selection tools to select all nodes of the function I am currently looking at and de-select the node that has not been hit:
+For most of the time, it is easier to use code coverage tools and load its data into Ghidra in order to visualize the executin flow of the target program. However, depending on the target program, you may not have an easy way to get this data. To get around this, if the program you are looking at is small enough, you can use a selection tool to highlight all nodes of the function you are currently looking at and de-select the node that has not been hit:
 
 ![highlight](/assets/img/ghidra-ida-users-7.png)
 
-This can be done by `Select` -> `Flow From`. It's important to remember this is just a hack. Ideally, if you are going the manual analysis route, you should consider permanently setting the colors of each node by right clicking the node and selecting `Colors` -> `Set Colors`.
+This can be done by navigating to `Select` -> `Flow From`. It's important to remember this is just a hack. Ideally, if you are going the manual analysis route, you should consider permanently setting the colors of each node by right clicking the node and selecting `Colors` -> `Set Colors`.
 
 # Conclusion
 
