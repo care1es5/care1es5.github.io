@@ -132,7 +132,7 @@ GHIDRA_HOME=<Ghidra Home>
 HOME=/home/<username>/Desktop
 
 # dragondance
-cd $HOME/dragondace 
+cd $HOME/dragondance 
 gradle -PGHIDRA_INSTALL_DIR=$GHIDRA_HOME
 cp dist/*.zip $GHIDRA_HOME/Extensions/Ghidra 
 
